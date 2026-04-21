@@ -8,8 +8,9 @@ if __name__ == "__main__":
     #print(text[:1000])
     
     job_description = """
-    Looking for a Python developer with experience in SQL, AWS, Docker, and APIs
-    """
+Looking for a Python developer with experience in Amazon Web Services,
+Docker, REST APIs, and Machine Learning
+"""
 
     result = analyze(text, job_description)
 
