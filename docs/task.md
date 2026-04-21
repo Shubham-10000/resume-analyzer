@@ -12,3 +12,5 @@
 * [ ] Create /analyze endpoint
 * [ ] Call Python API
 * [ ] Return formatted response
+
+Open → Check branch → Pull → Work → Test → Commit → Push
