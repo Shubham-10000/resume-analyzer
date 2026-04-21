@@ -1,17 +1,17 @@
 from parser import extract_text_from_pdf_file
 from analyze import analyze
 
-if __name__ == "__main__":
-    text = extract_text_from_pdf_file(r"/Users/bunny/Documents/Colabration_projects/Resume_analyzer/python-service/Shubham_Sawant_Resume.pdf")
-    
-    #print("----- EXTRACTED TEXT -----")
-    #print(text[:1000])
-    
-    job_description = """
-Looking for a Python developer with experience in Amazon Web Services,
-Docker, REST APIs, and Machine Learning
-"""
 
-    result = analyze(text, job_description)
+if __name__ == "__main__":
+    resume_path = "/Users/bunny/Documents/Colabration_projects/Resume_analyzer/python-service/Shubham_Sawant_Resume.pdf"
+
+    resume_text = extract_text_from_pdf_file(resume_path)
+
+    job_description = """
+    Looking for a Python developer with experience in Amazon Web Services,
+    Docker, REST APIs, and Machine Learning
+    """
+
+    result = analyze(resume_text, job_description)
 
     print(result)

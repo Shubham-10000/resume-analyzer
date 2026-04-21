@@ -1,19 +1,19 @@
 import pdfplumber
 import re
 
-def extract_text_from_pdf_file(pdf_file):
-    text=""
-    with pdfplumber.open(pdf_file) as pdf_file:
-        
-        for page in pdf_file.pages:
+
+def extract_text_from_pdf_file(pdf_path):
+    text = ""
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
             extracted_text = page.extract_text()
             if extracted_text:
-                text+=extracted_text +"\n"
+                text += extracted_text + "\n"
     return clean_text(text)
 
+
 def clean_text(text):
-    # Remove multiple spaces and newlines
     text = text.lower()
-    text = re.sub(r'[^a-z0-9\s]', ' ', text)
-    text = re.sub(r'\s+', ' ', text) # remove extra spaces
+    text = re.sub(r'[^a-z0-9\s]', ' ', text)  # remove special chars
+    text = re.sub(r'\s+', ' ', text)          # remove extra spaces
     return text.strip()
