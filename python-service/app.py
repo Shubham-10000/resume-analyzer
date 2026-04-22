@@ -1,4 +1,5 @@
 <<<<<<< ours
+<<<<<<< ours
 from fastapi import FastAPI
 from pydantic import BaseModel
 from analyze import analyze
@@ -25,6 +26,8 @@ def analyze_resume(request:AnalyzeRequest):
     result = analyze(request.resume_text,request.job_description)
     return result
 =======
+=======
+>>>>>>> theirs
 from __future__ import annotations
 
 from fastapi import FastAPI, HTTPException
@@ -62,4 +65,7 @@ def analyze(request: AnalyzeRequest) -> AnalyzeResponse:
         matched_skills=result.matched_skills,
         missing_skills=result.missing_skills,
     )
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs

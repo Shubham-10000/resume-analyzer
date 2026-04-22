@@ -1,4 +1,5 @@
 <<<<<<< ours
+<<<<<<< ours
 import pdfplumber
 import re
 
@@ -19,6 +20,8 @@ def clean_text(text):
     text = re.sub(r'\s+', ' ', text)          # remove extra spaces
     return text.strip()
 =======
+=======
+>>>>>>> theirs
 from __future__ import annotations
 
 from pathlib import Path
@@ -38,4 +41,7 @@ def extract_text_from_pdf(pdf_path: str | Path) -> str:
             pages.append(page.extract_text() or "")
 
     return "\n".join(pages).strip()
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs

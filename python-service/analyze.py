@@ -1,4 +1,5 @@
 <<<<<<< ours
+<<<<<<< ours
 import re
 from parser import clean_text
 
@@ -82,6 +83,8 @@ def analyze(resume_text, job_description):
         "missing_skills": sorted(missing)
     }
 =======
+=======
+>>>>>>> theirs
 from __future__ import annotations
 
 import re
@@ -163,4 +166,7 @@ def analyze_resume(resume_text: str, job_description: str) -> AnalysisResult:
         matched_skills=matched,
         missing_skills=missing,
     )
+<<<<<<< ours
+>>>>>>> theirs
+=======
 >>>>>>> theirs
